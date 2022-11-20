@@ -11,7 +11,7 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @HttpCode(HttpStatus.OK)
-  @Get('findById/:id')
+  @Get('getById/:id')
   public async getById(@Param() { id }: FindOneParamById): Promise<User> {
     return await this.userService.getById(id);
   }
